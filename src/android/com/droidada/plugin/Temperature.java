@@ -72,6 +72,7 @@ public class Temperature extends CordovaPlugin implements SensorEventListener {
     }
     
     if(this.sensor != null) {
+      Toast.makeText(cordova.getActivity(), "Just show something...", Toast.LENGTH_LONG).show();
       this.sensorManager.registerListener(this, this.sensor, SensorManager.SENSOR_DELAY_NORMAL);
       this.lastAccessTime = System.currentTimeMillis();
       this.status = STARTING;
